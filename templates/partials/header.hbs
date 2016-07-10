@@ -1,0 +1,34 @@
+---
+component: header
+---
+<nav class="navbar container">
+	<a href="/" class="navbar-brand">Brand</a>
+	<div class="pull-xs-right m-l-1">
+		<a href="/{{slug}}" class="btn btn-secondary {{#is lang "de"}}disabled{{/is}}">
+			Deutsch
+		</a>
+		<a href="/en/{{translation}}" class="btn btn-secondary {{#is lang "en"}}disabled{{/is}}">
+			English
+		</a>
+	</div>
+	<ul class="nav navbar-nav pull-xs-right">
+		{{#is lang "de"}}
+			{{#germanPages}}
+				{{#each items as |item|}}
+					<li class="nav-item">
+						<a href="{{site.prefix}}/{{@item.data.slug}}" class="nav-link">{{@item.data.title}}</a>
+					</li>
+				{{/each}}
+			{{/germanPages}}
+		{{/is}}
+		{{#is lang "en"}}
+			{{#englishPages}}
+				{{#each items as |item|}}
+					<li class="nav-item">
+						<a href="{{site.prefix}}/en/{{@item.data.slug}}" class="nav-link">{{@item.data.title}}</a>
+					</li>
+				{{/each}}
+			{{/englishPages}}
+		{{/is}}
+	</ul>
+</nav>

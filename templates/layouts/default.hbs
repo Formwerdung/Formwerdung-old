@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+        <link rel="dns-prefetch" href="https://code.jquery.com">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{title}} | {{site.title}}</title>
+        <meta name="description" content="{{metaDesc}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="application-name" content="Sample Title">
+        <meta name="msapplication-tooltip" content="A description of what this site does.">
+        {{!-- https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md --}}
+        {{!-- <meta name="msapplication-starturl" content="http://www.example.com/index.html?pinned=true"> --}}
+        <meta name="msapplication-navbutton-color" content="{{site.color}}">
+        {{!-- <meta name="msapplication-window" content="width=800;height=600"> --}}
+        {{!-- <meta name="msapplication-task" content="name=Task 1;action-uri=http://host/Page1.html;icon-uri=http://host/icon1.ico"> --}}
+        {{!-- <meta name="msapplication-task" content="name=Task 2;action-uri=http://microsoft.com/Page2.html;icon-uri=http://host/icon2.ico"> --}}
+        {{!-- <meta name="theme-color" content="#ff69b4"> --}}
+        {{!-- <meta name="robots" content="noindex"> --}}
+
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+        <link rel="canonical" href="{{site.url}}/{{slug}}">
+        {{!-- <link rel="shortlink" href="h5bp.com"> --}}
+        {{!-- <link rel="search" title="" type="application/opensearchdescription+xml" href=""> --}}
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        {{!-- <link rel="apple-touch-startup-image" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="img/startup-retina.png"> --}}
+        <link rel="icon" sizes="192x192" href="highres-icon.png">
+        {{!-- Place favicon.ico in the root directory --}}
+
+        {{!-- <meta name="apple-mobile-web-app-capable" content="yes"> --}}
+        {{!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> --}}
+        {{!-- <meta name="apple-mobile-web-app-title" content=""> --}}
+        {{!-- <meta name="mobile-web-app-capable" content="yes"> --}}
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+        <!-- build:css /styles/main.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <link rel="stylesheet" href="/styles/main.css">
+        <!-- endbuild -->
+
+        <!-- build:js /scripts/vendor/picturefill.js async defer -->
+        <script src="../bower_components/picturefill/dist/picturefill.js" async defer></script>
+        <!-- endbuild -->
+
+        <meta property="fb:app_id" content="123456789">
+        <meta property="og:url" content="{{site.url}}/{{slug}}">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="">
+        <meta property="og:image" content="{{site.ogImg}}">
+        <meta property="og:description" content="">
+        <meta property="og:site_name" content="">
+        <meta property="article:author" content="">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@site_account">
+        <meta name="twitter:creator" content="@individual_account">
+        <meta name="twitter:url" content="http://www.example.com/path/to/page.html">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="http://www.example.com/path/to/image.jpg">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        {{> header}}
+
+        {{!-- Add your site or application content here --}}
+        <main>
+          {% body %}
+        </main>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{assets}}/scripts/vendor/jquery.min.js"><\/script>')</script>
+
+        <!-- build:js /scripts/main.js -->
+        <!-- bower:js -->
+        <!-- endbower -->
+        <script src="/scripts/main.js"></script>
+        <!-- endbuild -->
+
+        {{!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. --}}
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('set', 'anonymizeIp', true);ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>

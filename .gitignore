@@ -1,0 +1,5 @@
+bower_components
+node_modules
+app
+gulpfile.js
+lib/tasks

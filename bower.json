@@ -1,0 +1,27 @@
+{
+  "name": "boilerplate",
+  "description": "Assemble Boilerplate",
+  "main": "index.js",
+  "authors": [
+    "Marin Aeschbach <marin.aeschbach@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "tether": "^1.2.0",
+    "bootstrap": "v4.0.0-alpha.2",
+    "bourbon": "v5.0.0.beta.5",
+    "normalize-css": "normalize.css#^4.0.0",
+    "picturefill": "^3.0.2"
+  }
+}

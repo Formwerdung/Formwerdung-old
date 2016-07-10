@@ -1,0 +1,84 @@
+// bower:scss
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+@import "../../bower_components/bourbon/core/_bourbon.scss";
+// endbower
+
+// Settings
+$enable-flex:    true;
+
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$multiplier:     $major-second;
+$font-size-base: 1rem;
+$font-size-sm:   $multiplier * $font-size-base;
+$font-size-md:   $multiplier * $font-size-sm;
+$font-size-lg:   $multiplier * $font-size-md;
+
+// Turn on responsive font
+html {
+  font-size: $font-size-base;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: $font-size-sm;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: $font-size-md;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: $font-size-md;
+  }
+}
+
+// Utilities
+.fullscreen-img {
+  width: 100%;
+  @include position(absolute, 0 null null 0);
+}
+
+// Components
+.hero,
+.hero-container {
+  position: relative;
+}
+
+.hero {
+  color: $body-bg;
+}
+
+.hero-container {
+  z-index: 200;
+}
+
+.hero-img {
+  @include size(100%);
+  @include position(absolute, 0 null null 0);
+  margin: 0;
+  overflow: hidden;
+
+  &::before {
+    content: ' ';
+    background: rgba(0, 0, 0, 0.5);
+    @include size(100%);
+    @include position(absolute, 0 null null 0);
+    z-index: 100;
+  }
+}
+
+// Views
+.team,
+.contact {
+  padding-top: 3rem;
+}
+
+.contact {
+  padding-bottom: 3rem;
+}
