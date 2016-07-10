@@ -17,11 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^2.2.2",
-    "tether": "^1.2.0",
-    "bootstrap": "v4.0.0-alpha.2",
-    "bourbon": "v5.0.0.beta.5",
-    "normalize-css": "normalize.css#^4.0.0",
+    "normalize-css": "normalize.css#^4.2.0",
     "picturefill": "^3.0.2"
   }
 }
