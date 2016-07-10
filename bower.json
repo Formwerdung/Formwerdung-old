@@ -17,6 +17,8 @@
     "tests"
   ],
   "dependencies": {
+    "neat": "v1.8.0",
+    "bourbon": "v5.0.0.beta.6",
     "normalize-css": "normalize.css#^4.2.0",
     "picturefill": "^3.0.2"
   }

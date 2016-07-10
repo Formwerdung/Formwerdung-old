@@ -1,40 +1,42 @@
 // bower:scss
-@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 @import "../../bower_components/bourbon/core/_bourbon.scss";
 // endbower
 
 // Settings
-$enable-flex:    true;
+$md-screen: rem(600);
+$lg-screen: rem(900);
+$xl-screen: rem(1200);
 
 $font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 $font-family-base: $font-family-sans-serif;
 
-$multiplier:     $major-second;
+$multiplier:     1.125;
 $font-size-base: 1rem;
-$font-size-sm:   $multiplier * $font-size-base;
-$font-size-md:   $multiplier * $font-size-sm;
+$font-size-md:   $multiplier * $font-size-base;
 $font-size-lg:   $multiplier * $font-size-md;
+$font-size-xl:   $multiplier * $font-size-lg;
 
 // Turn on responsive font
 html {
   font-size: $font-size-base;
 }
 
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: $font-size-sm;
-  }
-}
-
-@include media-breakpoint-up(md) {
+@include media($md-screen) {
   html {
     font-size: $font-size-md;
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media($lg-screen) {
   html {
-    font-size: $font-size-md;
+    font-size: $font-size-lg;
+  }
+}
+
+@include media($xl-screen) {
+  html {
+    font-size: $font-size-xl;
   }
 }
 
@@ -51,7 +53,7 @@ html {
 }
 
 .hero {
-  color: $body-bg;
+  // color: $body-bg;
 }
 
 .hero-container {
