@@ -1,0 +1,41 @@
+.masthead {
+  background: #59788d; // #dddddd; // silver
+  // box-shadow: 0 1px 1px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.08);
+  // font-size: 1.5em;
+  height: 3em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand { // these are h1 resets
+  font-size: 1em;
+  height: 3em;
+  @include margin(0 null);
+}
+
+.logo {
+  @include padding(0.5em);
+  height: 100%;
+}
+
+.access-container {
+  list-style-type: none;
+  @include padding(null null null 0);
+  @include margin(0 null);
+  display: flex;
+}
+
+.access-item {
+  // border-left: 1px solid #2c3e4b;
+  // box-shadow: inset -1px 0 0 rgba(255,255,255,.3),-1px 0 0 rgba(255,255,255,.3);
+  // @include padding(null 0.5em);
+}
+
+.access-link {
+  color: #fffefc; // ebony
+  text-decoration: none;
+  line-height: 1;
+  @include padding(1em 0.5em);
+  display: inline-block;
+}

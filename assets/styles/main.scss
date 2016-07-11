@@ -1,49 +1,81 @@
 // bower:scss
-@import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 @import "../../bower_components/bourbon/core/_bourbon.scss";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 // endbower
 
 // Settings
-$md-screen: rem(600);
-$lg-screen: rem(900);
-$xl-screen: rem(1200);
+$md-screen: 39.375rem; // 1 + 16 + 1 + 16 + 1 // 630 / 18 = 35 // 630 / 16 = 39.375
+$lg-screen: 70.875rem; // 2 + 16 + 2 + 16 + 2 + 16 + 2 // 1134 / 20.25 = 56 // 1134 / 16 = 70.875
+$xl-screen: 75em;
+
+$md-container: 33em; // 1 + 16 + 1 + 16 + 1
+$lg-container: 52em; // 2 + 16 + 2 + 16 + 2
+
+
+$sm-mgn: 0.5em;
+$md-mgn: 1em;
+$lg-mgn: 2em;
+$xl-mgn: 4em;
 
 $font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 $font-family-base: $font-family-sans-serif;
 
 $multiplier:     1.125;
-$font-size-base: 1rem;
+$font-size-base: 1em;
 $font-size-md:   $multiplier * $font-size-base;
 $font-size-lg:   $multiplier * $font-size-md;
 $font-size-xl:   $multiplier * $font-size-lg;
 
+$max-width: 100em;
+
 // Turn on responsive font
-html {
+body {
+  font-family: 'Noto Serif', serif;
   font-size: $font-size-base;
+  font-style: italic;
+  font-weight: normal;
 }
 
 @include media($md-screen) {
-  html {
+  body {
     font-size: $font-size-md;
   }
 }
 
 @include media($lg-screen) {
-  html {
+  body {
     font-size: $font-size-lg;
   }
 }
 
 @include media($xl-screen) {
-  html {
+  body {
     font-size: $font-size-xl;
   }
 }
+
+@import "masthead";
+
 
 // Utilities
 .fullscreen-img {
   width: 100%;
   @include position(absolute, 0 null null 0);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include media($md-screen) {
+    width: $md-container;
+    @include margin(null auto);
+  }
+
+  @include media($lg-screen) {
+    width: $lg-container;
+  }
 }
 
 // Components
@@ -53,7 +85,7 @@ html {
 }
 
 .hero {
-  // color: $body-bg;
+  padding: 1em;
 }
 
 .hero-container {
@@ -68,10 +100,29 @@ html {
 
   &::before {
     content: ' ';
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     @include size(100%);
     @include position(absolute, 0 null null 0);
     z-index: 100;
+  }
+}
+
+.hero-byline {
+  font-size: 1.25em;
+  @include margin(0 null);
+}
+
+.cards {
+  // flex-direction: column;
+}
+
+.card {
+  background: #757b87;
+  width: 100%;
+  @include padding(1em);
+
+  @include media($md-screen) {
+    width: 16em;
   }
 }
 
