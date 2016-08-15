@@ -1,28 +1,28 @@
 ---
 component: banner
 ---
-<header class="masthead">
-	<div class="masthead-container">
-		<a href="/">
-			<h1 class="brand">
-				<div class="logo-small">
-					{{> logoSmall }}
+<header id="js-banner" class="banner">
+	<div class="banner-container">
+		<a href="#js-main">
+			<h1 class="banner-brand">
+				<div class="banner-logo-small">
+					{{> bannerLogoSmall }}
 				</div>
-				<div class="logo-large">
-					{{> logoLarge }}
+				<div class="banner-logo-large">
+					{{> bannerLogoLarge }}
 				</div>
 			</h1>
 		</a>
-		<nav class="access">
-			<ul class="access-container">
-				<li class="access-item">
-					<a href="#js-banner" class="access-link">Home</a>
+		<nav class="banner-nav">
+			<ul class="banner-nav-container">
+				<li class="banner-nav-item">
+					<a href="#js-main" class="banner-nav-item-link">Home</a>
 				</li>
-				<li class="access-item">
-					<a href="#js-case-studies" class="access-link">Kunden</a>
+				<li class="banner-nav-item">
+					<a href="#js-projects" class="banner-nav-item-link">Projekte</a>
 				</li>
-				<li class="access-item">
-					<a href="#js-contact" class="access-link">Kontakt</a>
+				<li class="banner-nav-item">
+					<a href="#js-contact" class="banner-nav-item-link">Kontakt</a>
 				</li>
 			</ul>
 		</nav>

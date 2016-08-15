@@ -1,7 +1,7 @@
 /**
- * Classes
+ * Mixins
  */
-.container {
+@mixin container {
 
   @include media($md-screen) {
     width: $md-container;

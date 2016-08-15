@@ -23,16 +23,13 @@ $md-container: 38rem; // 1 + 16 + 1 + 16 + 1
 $lg-container: 58rem; // 2 + 16 + 2 + 16 + 2
 $xl-container: 78rem;
 
-// $sm-mgn: 0.5em;
-// $md-mgn: 1em;
-// $lg-mgn: 2em;
-// $xl-mgn: 4em;
+$base-wrapping-space: 1em;
 
 $font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 $font-family-base: $font-family-sans-serif;
 
 $base-multiplier:     1.125;
-$base-font-size: 1em;
+$base-font-size:      1em;
 $base-font-size-md:   $base-multiplier * $base-font-size;
 $base-font-size-lg:   $base-multiplier * $base-font-size-md;
 $base-font-size-xl:   $base-multiplier * $base-font-size-lg;
@@ -62,3 +59,6 @@ $base-font-family:
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Z-Indices
+$banner-z-index: 300;

@@ -13,7 +13,7 @@ $card-icon-size: 3em;
  * Classes
  */
 .cards {
-  @extend .container;
+  @include container;
   @include padding(2em null);
   display: flex;
   flex-wrap: wrap;

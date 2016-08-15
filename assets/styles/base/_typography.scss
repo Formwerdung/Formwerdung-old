@@ -7,6 +7,7 @@ body {
   font-size: $base-font-size;
   font-style: normal;
   font-weight: normal;
+  scroll-behaviour: smooth;
 }
 
 @include media($md-screen) {

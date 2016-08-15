@@ -62,5 +62,7 @@
   });
 
   // The rest of the code goes here
+  var defaultDuration = 300; // ms
+  zenscroll.setup(defaultDuration);
 
 }));

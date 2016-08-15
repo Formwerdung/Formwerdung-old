@@ -1,36 +1,63 @@
-.masthead {
-  line-height: 1;
-  height: 3em;
-  width: 100%;
-  position: fixed;
-  z-index: 300;
-  background: $base-background-color;
+/**
+ * Vars
+ */
+// Colors
+$banner-color: $base-color;
+$banner-hover-color: $action-color;
+$banner-background-color: $base-background-color;
+
+// Copy
+$banner-font-size: 1em;
+
+// Sizing
+$banner-height: 3em;
+$banner-logo-pdg: 0.5em $base-wrapping-space;
+$banner-nav-item-link-pdg: 1em 0.5em;
+$banner-nav-item-link-latest-pdg: null $base-wrapping-space null null;
+
+
+/**
+ * Mixins
+ */
+@mixin logo {
+  @include padding($banner-logo-pdg);
+  height: 100%;
 }
 
-.masthead-container {
-  @extend .container;
+
+/**
+ * Classes
+ */
+.banner {
+  line-height: 1;
+  background: $banner-background-color;
+  @include size(100%, $banner-height);
+  @include position(fixed, 0 null null 0);
+  z-index: $banner-z-index;
+}
+
+.banner-container {
+  @include container;
   display: flex;
   justify-content: space-between;
 }
 
-.brand { // these are h1 resets
-  font-size: 1em;
-  height: 3em;
+.banner-brand { // these are h1 resets
+  font-size: $banner-font-size;
+  height: $banner-height;
   @include margin(0 null);
 }
 
-.logo-small {
-  @include padding(0.5em 1em);
-  height: 100%;
+.banner-logo-small {
+  @include logo;
 
   @include media($md-screen) {
     display: none;
   }
 }
 
-.logo-large {
-  @include padding(0.5em 1em);
-  height: 100%;
+.banner-logo-large {
+  @include logo;
   display: none;
 
   @include media($md-screen) {
@@ -38,58 +65,55 @@
   }
 }
 
-.logo-icon {
+.banner-logo-icon {
   height: 100%;
 }
 
-.logo-icon-group {
+.banner-logo-icon-group {
   stroke: none;
   fill: none;
   fill-rule: evenodd;
 }
 
-.logo-icon-o-fill,
-.logo-icon-r-fill,
-.logo-icon-w,
-.logo-icon-e,
-.logo-icon-r,
-.logo-icon-d,
-.logo-icon-u,
-.logo-icon-n,
-.logo-icon-g,
-.logo-icon-sigil-top-fill,
-.logo-icon-sigil-middle-fill,
-.logo-icon-sigil-bottom-fill,
-.logo-icon-square {
-  fill: $base-color;
+.banner-logo-icon-o-fill,
+.banner-logo-icon-r-fill,
+.banner-logo-icon-w,
+.banner-logo-icon-e,
+.banner-logo-icon-r,
+.banner-logo-icon-d,
+.banner-logo-icon-u,
+.banner-logo-icon-n,
+.banner-logo-icon-g,
+.banner-logo-icon-sigil-top-fill,
+.banner-logo-icon-sigil-middle-fill,
+.banner-logo-icon-sigil-bottom-fill,
+.banner-logo-icon-square {
+  fill: $banner-color;
 }
 
-.access-container {
-  list-style-type: none;
-  @include padding(null null null 0);
-  @include margin(0 null);
+.banner-nav-container {
   display: flex;
 }
 
-.access-item {
+.banner-nav-item {
 
   &:last-child {
 
-    .access-link {
-      @include padding(null 1em null null);
+    .banner-nav-item-link {
+      @include padding($banner-nav-item-link-latest-pdg);
     }
   }
 }
 
-.access-link {
-  color: $base-color; // ebony
+.banner-nav-item-link {
+  color: $banner-color;
   text-decoration: none;
-  @include padding(1em 0.5em);
+  @include padding($banner-nav-item-link-pdg);
   display: inline-block;
 
   &:active,
   &:focus,
   &:hover {
-    color: $action-color;
+    color: $banner-hover-color;
   }
 }

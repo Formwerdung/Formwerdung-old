@@ -27,7 +27,7 @@ $contact-dismiss-size: 3em;
  * Classes
  */
 .contact {
-  @extend .container;
+  @include container;
   @include padding(2em 1em);
 }
 

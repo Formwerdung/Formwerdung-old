@@ -1,44 +1,50 @@
 /**
+ * Vars
+ */
+// Colors
+$hero-background-color: rgba(255, 255, 255, 0.4);
+
+// Copy
+$hero-font-size: 1.25em;
+
+// Spacing
+$hero-height: 45vh;
+$hero-pdg: null $base-wrapping-space;
+$hero-offset-top: $banner-height;
+$hero-container-width-md: 35rem;
+$hero-container-width-lg: 41rem;
+$hero-byline-pdg: 0.5em;
+
+
+/**
  * Classes
  */
-.hero,
-.hero-container {
-  position: relative;
-}
-
 .hero {
   background: url('../images/bg.png') center center;
   background-size: cover;
-  height: 45vh;
-  @include padding(null 1em);
+  height: $hero-height;
+  @include padding($hero-pdg);
+  // @include margin($hero-offset-top null null null);
   display: flex;
-
-  // @include media($md-screen) {
-  //   height: 35vh;
-  // }
-  //
-  // // @include media($lg-screen) {
-  // //   height: 30vh;
-  // // }
 }
 
 .hero-container {
-  @extend .container;
+  @include container;
   margin: auto;
 
   @include media($md-screen) {
-    width: 35rem;
+    width: $hero-container-width-md;
   }
 
   @include media($md-screen) {
-    width: 41rem;
+    width: $hero-container-width-lg;
   }
 }
 
 .hero-byline {
-  font-size: 1.25em;
+  font-size: $hero-font-size;
   font-weight: normal;
-  background: rgba(255, 255, 255, 0.4);
-  @include padding(0.5em);
+  background: $hero-background-color;
+  @include padding($hero-byline-pdg);
   @include margin(0 null);
 }
