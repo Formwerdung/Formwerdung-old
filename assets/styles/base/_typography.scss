@@ -1,0 +1,34 @@
+/**
+ * Tags
+ */
+body {
+  background: $base-background-color;
+  font-family: $base-font-family; // 'Noto Serif', serif;
+  font-size: $base-font-size;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@include media($md-screen) {
+  body {
+    font-size: $base-font-size-md;
+  }
+}
+
+@include media($lg-screen) {
+  body {
+    font-size: $base-font-size-lg;
+  }
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color 150ms ease;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $base-color;
+  }
+}

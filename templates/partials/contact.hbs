@@ -1,0 +1,22 @@
+---
+component: contact
+---
+<section id="js-contact" class="contact">
+  <div class="contact-container">
+    <h2>Kontakt</h2>
+    <p>Wir freuen uns, von Ihnen zu hören. Senden Sie uns eine Email, um ein unverbindliches Treffen zu verabreden.</p>
+    <div id="js-contact-feedback"></div>
+    <form id="js-contact-form" class="contact-form" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name">
+      <label for="email">Email</label>
+      <input type="email" name="email">
+      <label for="description">Was m&ouml;chten Sie besprechen?</label>
+      <textarea rows="5" name="message"></textarea>
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value="Anfrage von formwerdung.ch!">
+      <input type="submit" value="Senden" class="contact-form-submit">
+    </form>
+    <p class="contact-mailto">Wenn Sie nicht gern Formulare ausfüllen, können Sie auch mit <a id="js-contact-mailto-link" href="mailto:info@example.com">diesem mailto-Link</a> ihr gewohntes Email-Programm zu öffnen.</p>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+/**
+ * Vars
+ */
+// Colors
+$contact-color: $base-color;
+$contact-hover-color: $base-background-color;
+$contact-success: #3cec96;
+$contact-error: #bb544a;
+
+// Deco
+$contact-border: $base-border;
+
+// Spacing
+$contact-dismiss-size: 3em;
+
+
+/**
+ * Mixins
+ */
+@mixin contactAlert {
+  @include position;
+  @include padding(1em ($contact-dismiss-size + 1em) 1em 1em);
+}
+
+
+/**
+ * Classes
+ */
+.contact {
+  @extend .container;
+  @include padding(2em 1em);
+}
+
+.contact-container {
+  max-width: 35em;
+}
+
+.contact-alert-success {
+  @include contactAlert;
+  background: $contact-success;
+}
+
+.contact-alert-error {
+  @include contactAlert;
+  background: $contact-error;
+}
+
+.contact-alert-dismiss {
+  background: none;
+  @include size($contact-dismiss-size)
+  @include padding(1em 1em 0 0);
+  @include position(absolute, 0 0 null null);
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: none;
+
+    .contact-alert-dismiss-icon {
+      stroke: $contact-hover-color;
+    }
+  }
+}
+
+.contact-alert-dismiss-icon {
+  stroke: $contact-color;
+  transition: stroke $base-duration $base-timing;
+}
+
+.contact-mailto {
+  border-top: $contact-border;
+  @include padding(1em null null);
+  @include margin(2em null 0);
+}

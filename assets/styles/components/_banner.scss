@@ -1,0 +1,95 @@
+.masthead {
+  line-height: 1;
+  height: 3em;
+  width: 100%;
+  position: fixed;
+  z-index: 300;
+  background: $base-background-color;
+}
+
+.masthead-container {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand { // these are h1 resets
+  font-size: 1em;
+  height: 3em;
+  @include margin(0 null);
+}
+
+.logo-small {
+  @include padding(0.5em 1em);
+  height: 100%;
+
+  @include media($md-screen) {
+    display: none;
+  }
+}
+
+.logo-large {
+  @include padding(0.5em 1em);
+  height: 100%;
+  display: none;
+
+  @include media($md-screen) {
+    display: block;
+  }
+}
+
+.logo-icon {
+  height: 100%;
+}
+
+.logo-icon-group {
+  stroke: none;
+  fill: none;
+  fill-rule: evenodd;
+}
+
+.logo-icon-o-fill,
+.logo-icon-r-fill,
+.logo-icon-w,
+.logo-icon-e,
+.logo-icon-r,
+.logo-icon-d,
+.logo-icon-u,
+.logo-icon-n,
+.logo-icon-g,
+.logo-icon-sigil-top-fill,
+.logo-icon-sigil-middle-fill,
+.logo-icon-sigil-bottom-fill,
+.logo-icon-square {
+  fill: $base-color;
+}
+
+.access-container {
+  list-style-type: none;
+  @include padding(null null null 0);
+  @include margin(0 null);
+  display: flex;
+}
+
+.access-item {
+
+  &:last-child {
+
+    .access-link {
+      @include padding(null 1em null null);
+    }
+  }
+}
+
+.access-link {
+  color: $base-color; // ebony
+  text-decoration: none;
+  @include padding(1em 0.5em);
+  display: inline-block;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $action-color;
+  }
+}

@@ -1,0 +1,44 @@
+/**
+ * Classes
+ */
+.hero,
+.hero-container {
+  position: relative;
+}
+
+.hero {
+  background: url('../images/bg.png') center center;
+  background-size: cover;
+  height: 45vh;
+  @include padding(null 1em);
+  display: flex;
+
+  // @include media($md-screen) {
+  //   height: 35vh;
+  // }
+  //
+  // // @include media($lg-screen) {
+  // //   height: 30vh;
+  // // }
+}
+
+.hero-container {
+  @extend .container;
+  margin: auto;
+
+  @include media($md-screen) {
+    width: 35rem;
+  }
+
+  @include media($md-screen) {
+    width: 41rem;
+  }
+}
+
+.hero-byline {
+  font-size: 1.25em;
+  font-weight: normal;
+  background: rgba(255, 255, 255, 0.4);
+  @include padding(0.5em);
+  @include margin(0 null);
+}

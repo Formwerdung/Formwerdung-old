@@ -1,0 +1,18 @@
+/**
+ * Classes
+ */
+.container {
+
+  @include media($md-screen) {
+    width: $md-container;
+    @include margin(null auto);
+  }
+
+  @include media($lg-screen) {
+    width: $lg-container;
+  }
+
+  @include media($xl-screen) {
+    width: $xl-container;
+  }
+}

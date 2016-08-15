@@ -1,0 +1,58 @@
+.portfolio {
+  @extend .container;
+  @include position;
+  min-height: 45em;
+}
+
+$device-border-color: transparentize($base-color, 0.8);
+$large-screen: 53.75em !default;
+$device-padding-vertical: 5em;
+$device-padding-horizontal: 0.4em;
+$device-screen-width: 14em;
+$device-screen-height: 25em;
+$device-background: white;
+$device-backside-background: darken($device-background, 10%);
+$device-text-color: white;
+$device-background-top: #162C4C;
+$device-background-bottom: #0A120D;
+$gradient-angle: 10deg;
+$device-screen-image: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg";
+
+
+.device {
+  display: none;
+  position: relative;
+  top: 5em;
+
+  @include media($large-screen) {
+    background: $device-background;
+    border-radius: 2em;
+    border: 1px solid $device-border-color;
+    box-shadow:
+    13px 0 $base-background-color,
+    14px 0 $device-border-color;
+    display: block;
+    float: right;
+    padding: $device-padding-vertical 0;
+    transform:
+    perspective(800px)
+    translateX(0)
+    translateY(-100px)
+    translateZ(50px)
+    rotateX(0)
+    rotateY(-20deg)
+    rotateZ(0)
+    ;
+    width: $device-screen-width + (2 * $device-padding-horizontal);
+    z-index: 200;
+
+    .screen {
+      @include size($device-screen-width, $device-screen-height);
+      background: url($device-screen-image) no-repeat;
+      background-size: cover;
+      border-radius: 0.2em;
+      border: 1px solid $device-border-color;
+      margin: auto;
+    }
+  }
+}

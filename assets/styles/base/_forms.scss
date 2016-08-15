@@ -1,0 +1,85 @@
+/**
+ * Tags
+ */
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.25em;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25em;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+#{$all-text-inputs} {
+  appearance: none;
+  background-color: shade($base-background-color, 2%);
+  border: $base-border;
+  border-radius: $base-border-radius;
+  // box-shadow: $base-form-box-shadow;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  padding: 1em;
+  transition: border-color $base-duration $base-timing;
+  width: 100%;
+
+  &:hover {
+    border-color: shade($base-border-color, 20%);
+  }
+
+  &:focus {
+    border-color: $action-color;
+    // box-shadow: $base-form-box-shadow-focus;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: shade($base-background-color, 5%);
+    cursor: not-allowed;
+
+    &:hover {
+      border: $base-border;
+    }
+  }
+
+  &::placeholder {
+    color: tint($base-color, 40%);
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: 1em;
+}
+
+[type="file"] {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+select {
+  margin-bottom: 1em;
+  width: 100%;
+}

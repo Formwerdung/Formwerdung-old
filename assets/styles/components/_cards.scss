@@ -1,0 +1,86 @@
+/**
+ * Vars
+ */
+// Deco
+$card-border: 1px solid transparentize($base-color, 0.8);
+
+// Spacing
+$card-icon-size: 3em;
+
+
+
+/**
+ * Classes
+ */
+.cards {
+  @extend .container;
+  @include padding(2em null);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  @include padding(1em);
+  border-bottom: $card-border;
+
+  @include media($md-screen) {
+    width: 50%;
+    border-right: $card-border;
+
+    &:nth-child(even) {
+      border-right: none;
+    }
+
+    &:nth-child(5) {
+      border-bottom: none;
+    }
+
+    &:nth-child(6) {
+      border-bottom: none;
+    }
+  }
+
+  @include media($lg-screen) {
+    width: (100% / 3);
+
+    &:nth-child(even) {
+      border-right: $card-border;
+    }
+
+    &:nth-child(3n) {
+      border-right: none;
+    }
+
+    &:nth-child(4) {
+      border-bottom: none;
+    }
+  }
+
+  @include media($xl-screen) {
+    width: 25%;
+  }
+}
+
+.card-large {
+
+  @include media($xl-screen) {
+    width: 50%;
+  }
+}
+
+.card-icon {
+  @include size($card-icon-size);
+}
+
+.card-copy {
+  @include margin(null null null 3.5em);
+}
+
+.card-heading {
+  font-size: 1.125em;
+}
+
+.card-graf {
+  @include margin(0 null);
+  float: left;
+}
