@@ -111,6 +111,7 @@ $banner-nav-item-link-latest-pdg: null $base-wrapping-space null null;
   @include padding($banner-nav-item-link-pdg);
   display: inline-block;
 
+  &.active,
   &:active,
   &:focus,
   &:hover {

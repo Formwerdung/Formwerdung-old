@@ -21,6 +21,15 @@
     "bourbon": "v5.0.0.beta.6",
     "normalize-css": "normalize.css#^4.2.0",
     "picturefill": "^3.0.2",
-    "zenscroll": "^3.2.1"
+    "zenscroll": "^3.2.1",
+    "bootstrap": "v4.0.0-alpha.3"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "js/dist/scrollspy.js",
+        "js/dist/util.js"
+      ]
+    }
   }
 }

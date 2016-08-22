@@ -63,6 +63,8 @@
 
   // The rest of the code goes here
   var defaultDuration = 300; // ms
-  zenscroll.setup(defaultDuration);
+  var edgeOffset = 80; // px
+  zenscroll.setup(defaultDuration, edgeOffset);
 
+  $('body').scrollspy({target: '#js-banner-nav', offset: 100});
 }));
