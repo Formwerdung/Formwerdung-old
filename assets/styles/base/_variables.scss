@@ -6,7 +6,6 @@ $base-border-color: transparentize($base-color, 0.8);
 $base-background-color: #fffffe !default;
 $action-color: #1565c0;
 
-
 $base-border: 1px solid $base-border-color;
 $base-border-radius: 3px;
 
@@ -36,6 +35,7 @@ $base-font-size-xl:   $base-multiplier * $base-font-size-lg;
 
 $max-width: 100em;
 
+$base-line-height: 1.3;
 $base-font-family:
   // Safari for OS X and iOS (San Francisco)
   -apple-system,
