@@ -2,79 +2,81 @@
 component: cards
 ---
 <section class="cards">
-  <h1 class="card-title">Was wir bieten</h1>
+  <h1 class="card-title section-title">
+    Wie wir arbeiten
+    <div class="section-subheading">Starke Prinzipien für starke Webseiten</div>
+  </h1>
   <div class="card-container">
-    <section class="card">
+    <section class="card card-flake">
       {{> flakeIcon}}
       <h2 class="card-heading">
-        Handgefertigte Lösungen
+        Fertige deine Lösungen<br>von Hand
       </h2>
-      <p class="card-description">
-        Alles wird speziell auf Sie zugeschnitten, damit die Bedienung so einfach wie möglich ist. Wir modifizieren keine vorgefertigten Templates.
+      <p class="card-graf">
+        Alles wird individuell auf Sie zugeschnitten, damit die Bedienung so einfach wie möglich bleibt. Das heisst auch, dass wir nur soviel entwickeln wie nötig. Schlanke Webseiten sind sowieso schneller.
       </p>
     </section>
-    <section class="card card-large">
+    <section class="card card-large card-diamond">
+      {{> diamondIcon}}
+      <h2 class="card-heading">
+        Gestalte für<br>den Nutzer
+      </h2>
+      <p class="card-graf">
+        Ein Website soll benutzt werden, nicht angeschaut. Wenn wir designen, steht immer das Nutzererlebnis im Vordergrund: Klare Formen sind ebenso wichtig wie durchdachte Navigation. Dafür arbeiten wir exklusiv mit funktionierenden Prototypen, so dass Sie gleich sehen können, wie sich etwas verhält.
+      </p>
+    </section>
+    <section class="card card-large card-treasure">
+      {{> treasureIcon}}
+      <h2 class="card-heading">
+        Entwickle für das Gesamtkonzept
+      </h2>
+      <p class="card-graf">
+        Eine der wichtigsten Punkte unseres Angebots ist es, den Blickwinkel der User einzunehmen und so einen wertvollen Perspektivenwechsel anzubieten. Jeder unserer Aufträge muss mit einem persönlichen Gespräch beginnen, damit wir gemeinsam ein überzeugendes Konzept erarbeiten können.
+      </p>
+    </section>
+    <section class="card card-expand">
+      {{> expandIcon}}
+      <h2 class="card-heading">
+        Designe responsive
+      </h2>
+      <p class="card-graf">
+        Alle unsere Produkte sind von Grund auf <em>mobile first</em> konzipiert. Prototyping anstatt das Erstellen von graphischen Designs hilft uns in diesem Zusammenhang dabei, die Kosten klein zu halten.
+      </p>
+    </section>
+    <section class="card card-large card-puzzle">
+      {{> puzzleIcon}}
+      <h2 class="card-heading">
+        Arbeite iterativ
+      </h2>
+      <p class="card-graf">
+        Webseiten und Webapps können im Gegensatz zu Printprodukten iterativ gestaltet werden. Deshalb bieten wir Entwicklungspläne mit <em>Milestones</em> an. Das ermöglicht es uns, Produkte so in Tranchen zu launchen, dass ihre Kunden möglichst wenig <em>coming soon</em>-Seiten zu sehen kriegen.
+      </p>
+    </section>
+    <section class="card card-globe">
       {{> globeIcon}}
       <h2 class="card-heading">
-        UX-Fokussierte Gestaltung
+        Produzier keine Lock-in Effekte
       </h2>
-      <p class="card-description">
-        Webseiten wollen benutzt werden. Unsere Designs
+      <p class="card-graf">
+        Wir arbeiten vornehmlich mit <em>open source</em>-Produkten, die sich der Unterstützung einer grossen Community erfreuen. Das spart Geld, garantiert Qualität und erlaubt Ihnen, bei Unzufriedenheit schmerzfrei den Entwickler zu wechseln.
       </p>
     </section>
-    <section class="card card-large">
-      {{> searchIcon}}
+    <section class="card card-rocket">
+      {{> rocketIcon}}
       <h2 class="card-heading">
-        Komplett- und Teillösungen
+        Nutze die optimale Technologie
       </h2>
-      <p class="card-description">
-        Konzept, Design, Umsetzung, Pflege: Wenn Sie möchten, kommt bei uns alles aus einer Hand.
+      <p class="card-graf">
+        Wir gehen weite Wege, um mit den besten Technologien <em>für den anstehenden Job</em> zu arbeiten. Im Moment sind unsere Lieblinge <a href="https://angularjs.org/" target="_blank">Angular</a>, <a href="https://assemble.io/" target="_blank">Assemble</a>, <a href="https://www.meteor.com/" target="_blank">Meteor</a> und die Tools von <a href="https://roots.io/" target="_blank">Roots</a>.
       </p>
     </section>
-    <section class="card">
-      {{> devicesIcon}}
-      <h2 class="card-heading">
-        Strategisches Development
-      </h2>
-      <p class="card-description">
-        Wir behalten den Überblick. Unsere Offerten basieren auf. Dazu gehört auch, dass wir
-      </p>
-    </section>
-    <section class="card">
+    <section class="card card-carabiner">
       {{> ropeIcon}}
       <h2 class="card-heading">
-        Iteratives Arbeiten
+        Zusammen sind wir stärker
       </h2>
-      <p class="card-description">
-        Webseiten und Webapps können im Gegensatz zu Printprodukten iterativ gestaltet werden. Was ist das Wichtigste
-      </p>
-    </section>
-    <section class="card">
-      {{> devicesIcon}}
-      <h2 class="card-heading">
-        Reponsive Design
-      </h2>
-      <p class="card-description">
-        Mehr als nur ein Design fürs iPhone: Alle unsere Produkte sind von Grund auf <em>mobile first</em> konzipiert.
-        Man kann es sich nicht mehr erlauben, das Design für Mobilgeräte als
-      </p>
-    </section>
-    <section class="card">
-      {{> rocketIcon}}
-      <h2 class="card-heading">
-        Moderne Technologie
-      </h2>
-      <p class="card-description">
-        Wir gehen weite Wege, um mit den besten Tools und Technologien zu arbeiten. Wir bieten Apps in Meteor, Angular, Assemble und WordPress-CMS-Lösungen. Alles optimiert via Gulp oder Webpack.
-      </p>
-    </section>
-    <section class="card">
-      {{> rocketIcon}}
-      <h2 class="card-heading">
-        Kein Lock-in Effekt
-      </h2>
-      <p class="card-description">
-        Wir gehen weite Wege, um mit den besten Tools und Technologien zu arbeiten. Wir bieten Apps in Meteor, Angular, Assemble und WordPress-CMS-Lösungen. Alles optimiert via Gulp oder Webpack.
+      <p class="card-graf">
+        Suchmaschinenoptimierung <em>(SEO)</em> und die Integration von <em>social media</em>-Auftritten werden bei uns schon in der Planungsphase berücksichtigt. Auch Maschinen sollen ihre Website verstehen können.
       </p>
     </section>
   </div>

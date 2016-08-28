@@ -14,7 +14,7 @@ $card-icon-size: 3em;
  */
 .cards {
   @include container;
-  @include padding(2em null);
+  @include padding(null null);
 }
 
 .card-title {
@@ -28,40 +28,50 @@ $card-icon-size: 3em;
 }
 
 .card {
-  @include padding(1em);
+  font-size: 0.875em;
+  @include padding(2em 1em 2em);
   border-bottom: $card-border;
 
+  &:first-child {
+    border-top: $card-border;
+  }
+
   @include media($md-screen) {
+    @include padding(1em null);
     width: 50%;
     border-right: $card-border;
 
-    &:nth-child(even) {
-      border-right: none;
+    &:first-child {
+      border-top: none;
     }
 
-    &:nth-child(5) {
-      border-bottom: none;
-    }
-
-    &:nth-child(6) {
-      border-bottom: none;
-    }
+    // &:nth-child(even) {
+    //   border-right: none;
+    // }
+    //
+    // &:nth-child(5) {
+    //   border-bottom: none;
+    // }
+    //
+    // &:nth-child(6) {
+    //   border-bottom: none;
+    // }
   }
 
   @include media($lg-screen) {
     width: (100% / 3);
 
-    &:nth-child(even) {
-      border-right: $card-border;
-    }
-
-    &:nth-child(3n) {
-      border-right: none;
-    }
-
-    &:nth-child(4) {
-      border-bottom: none;
-    }
+    // &:nth-child(even) {
+    //   border-right: $card-border;
+    // }
+    //
+    // &:nth-child(3n) {
+    //   border-right: none;
+    // }
+    //
+    // &:nth-child(4) {
+    //   border-bottom: none;
+    // }
   }
 
   @include media($xl-screen) {
@@ -71,13 +81,142 @@ $card-icon-size: 3em;
 
 .card-large {
 
+  @include media($md-screen) {
+    width: 100%;
+  }
+
+  @include media($lg-screen) {
+    width: (100% / 3) * 2;
+  }
+
   @include media($xl-screen) {
     width: 50%;
   }
 }
 
+.card-flake {
+
+  @include media($md-screen) {
+    order: 1;
+  }
+}
+
+.card-expand {
+
+  @include media($md-screen) {
+    order: 2;
+  }
+
+  @include media($lg-screen) {
+    order: 4;
+  }
+
+  @include media($xl-screen) {
+    order: 3;
+  }
+}
+
+.card-diamond {
+
+  @include media($md-screen) {
+    order: 3;
+  }
+
+  @include media($lg-screen) {
+    order: 2;
+  }
+}
+
+.card-treasure {
+
+  @include media($md-screen) {
+    order: 4;
+  }
+
+  @include media($lg-screen) {
+    order: 3;
+  }
+
+  @include media($xl-screen) {
+    order: 6;
+  }
+}
+
+.card-puzzle {
+
+  @include media($md-screen) {
+    order: 7;
+  }
+
+  @include media($lg-screen) {
+    order: 6;
+  }
+
+  @include media($xl-screen) {
+    order: 8;
+  }
+}
+
+.card-globe {
+
+  @include media($md-screen) {
+    order: 5;
+  }
+
+  @include media($xl-screen) {
+    order: 4;
+  }
+}
+
+.card-rocket {
+
+  @include media($md-screen) {
+    order: 6;
+  }
+
+  @include media($lg-screen) {
+    order: 7;
+  }
+
+  @include media($xl-screen) {
+    order: 5;
+  }
+}
+
+.card-carabiner {
+
+  @include media($md-screen) {
+    order: 8;
+  }
+}
+
 .card-icon {
+  border: $base-border;
+  border-radius: 50%;
   @include size($card-icon-size);
+  @include padding(0.5em);
+  @include margin(null 1em 1em 0);
+  float: left;
+
+  @include media($md-screen) {
+    float: none;
+  }
+}
+
+.treasure-icon {
+  @include padding(0.5em 0.25em 0.25em);
+}
+
+.diamond-icon {
+  @include padding(0.75em null 0.25em);
+}
+
+.puzzle-icon {
+  @include padding(0.6em null 0.4em);
+}
+
+.expand-icon {
+  @include padding(0.6em null 0.4em);
 }
 
 .card-copy {
@@ -86,9 +225,15 @@ $card-icon-size: 3em;
 
 .card-heading {
   font-size: 1.125em;
+  @include margin(0 null 0.5em);
 }
 
 .card-graf {
   @include margin(0 null);
-  float: left;
+  @include padding(null null null 4em);
+
+  @include media($md-screen) {
+    @include padding(null null null 0);
+  }
+  // float: left;
 }

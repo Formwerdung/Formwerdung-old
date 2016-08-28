@@ -1,0 +1,15 @@
+/**
+ * Classes
+ */
+.imprint {
+  @include container;
+  @include padding(null 1em);
+}
+
+.imprint-container {
+  max-width: 35em;
+}
+
+.imprint-intertitle {
+  @include margin(2em null 0.5em);
+}

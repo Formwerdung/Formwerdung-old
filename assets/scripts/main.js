@@ -59,6 +59,16 @@
        });
      });
 
+     $('body').scrollspy({target: '#js-banner-nav', offset: 100});
+
+     var waypoint = new Waypoint({
+       element: document.getElementById('js-top-element'),
+       handler: function(direction) {
+         $('#js-banner').toggleClass('has-shadow')
+       },
+       offset: -20
+     });
+
   });
 
   // The rest of the code goes here
@@ -66,5 +76,4 @@
   var edgeOffset = 80; // px
   zenscroll.setup(defaultDuration, edgeOffset);
 
-  $('body').scrollspy({target: '#js-banner-nav', offset: 100});
 }));

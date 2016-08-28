@@ -1,0 +1,31 @@
+/**
+ * Classes
+ */
+.colophon {
+  font-size: 0.875em;
+  background: $secondary-background-color;
+  border-top: $base-border;
+  @include padding(5em null 1em);
+  @include clearfix;
+}
+
+.colophon-container {
+  @include container;
+  @include padding(null 1em);
+}
+
+.colophon-line {
+  @include margin(0 null);
+
+  @include media($md-screen) {
+    width: 50%;
+    float: left;
+  }
+}
+
+.colophon-link {
+
+  @include media($md-screen) {
+    text-align: right;
+  }
+}

@@ -3,7 +3,7 @@ component: banner
 ---
 <header id="js-banner" class="banner">
 	<div class="banner-container">
-		<a href="#js-main">
+		<a href="{{#if slug}}/{{else}}#js-main{{/if}}">
 			<h1 class="banner-brand">
 				<div class="banner-logo-small">
 					{{> bannerLogoSmall }}
@@ -16,10 +16,10 @@ component: banner
 		<nav id="js-banner-nav" class="banner-nav">
 			<ul class="banner-nav-container nav">
 				<li class="banner-nav-item nav-item">
-					<a href="#js-main" class="banner-nav-item-link nav-link">Home</a>
+					<a href="{{#if slug}}/{{else}}#js-main{{/if}}" class="banner-nav-item-link nav-link">Home</a>
 				</li>
 				<li class="banner-nav-item nav-item">
-					<a href="#js-projects" class="banner-nav-item-link nav-link">Projekte</a>
+					<a href="{{#if slug}}/#js-projects{{else}}#js-projects{{/if}}" class="banner-nav-item-link nav-link">Projekte</a>
 				</li>
 				<li class="banner-nav-item nav-item">
 					<a href="#js-contact" class="banner-nav-item-link nav-link">Kontakt</a>

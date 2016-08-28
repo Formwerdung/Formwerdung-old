@@ -29,7 +29,6 @@ a {
   text-decoration: none;
   transition: color 150ms ease;
 
-  &:active,
   &:focus,
   &:hover {
     color: $base-color;

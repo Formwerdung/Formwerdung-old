@@ -10,3 +10,19 @@
 @import "components/cards";
 @import "components/projects";
 @import "components/contact";
+@import "components/colophon";
+@import "components/imprint";
+
+.section-title {
+  @include margin(1.5em null 0.5em null);
+  font-size: 2em;
+}
+
+.section-subheading {
+  color: tint($base-color, 50%);
+  font-size: 0.5em;
+}
+
+.has-shadow {
+  border-bottom: $base-border;
+}
