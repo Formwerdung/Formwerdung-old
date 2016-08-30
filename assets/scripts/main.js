@@ -73,7 +73,7 @@
 
   // The rest of the code goes here
   var defaultDuration = 300; // ms
-  var edgeOffset = 80; // px
+  var edgeOffset = 50; // px
   zenscroll.setup(defaultDuration, edgeOffset);
 
 }));

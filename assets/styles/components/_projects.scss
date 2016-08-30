@@ -10,6 +10,7 @@ $project-device-border: $base-border;
 $project-gradient-angle: 10deg;
 $project-baselgia-device-screen-image: "../images/screencap-baselgia.png";
 $project-staerkle-device-screen-image: "../images/screencap-staerkle.png";
+$project-staerkle-device-screen-image: "../images/screencap-public-connect.png";
 
 // Spacing
 $project-baselgia-device-padding-vertical: 2rem;
@@ -20,6 +21,10 @@ $project-staerkle-device-padding-vertical: 6rem;
 $project-staerkle-device-padding-horizontal: 0.4rem;
 $project-staerkle-device-screen-width: 20rem;
 $project-staerkle-device-screen-height: 30rem;
+$project-public-connect-device-padding-vertical: 6rem;
+$project-public-connect-device-padding-horizontal: 0.4rem;
+$project-public-connect-device-screen-width: 20rem;
+$project-public-connect-device-screen-height: 30rem;
 
 
 /**
@@ -61,7 +66,7 @@ $project-staerkle-device-screen-height: 30rem;
  */
 .projects {
   @include container;
-  @include padding(null 1em);
+  @include padding(5em 1em);
   @include position;
   min-height: 90em;
 }
@@ -86,7 +91,7 @@ $project-staerkle-device-screen-height: 30rem;
       rotateY(-20deg)
       rotateZ(0)
     ;
-    z-index: 210;
+    z-index: 220;
   }
 }
 
@@ -115,12 +120,41 @@ $project-staerkle-device-screen-height: 30rem;
       rotateY(15deg)
       rotateZ(0)
     ;
-    z-index: 200;
+    z-index: 210;
   }
 }
 
 .project-baselgia-screen {
   @include size($project-baselgia-device-screen-width, $project-baselgia-device-screen-height);
   background: url($project-baselgia-device-screen-image) no-repeat;
+  @include screen;
+}
+
+.project-public-connect-device {
+  @include device;
+
+  @include media($lg-screen) {
+    box-shadow:
+      -13px 0 $project-device-background-color,
+      -14px 0 $project-device-border-color;
+    float: right;
+    @include padding($project-public-connect-device-padding-vertical 0);
+    width: $project-public-connect-device-screen-width + (2 * $project-public-connect-device-padding-horizontal);
+    transform:
+      perspective(800px)
+      translateX(0)
+      translateY(-100px)
+      translateZ(50px)
+      rotateX(0)
+      rotateY(15deg)
+      rotateZ(0)
+    ;
+    z-index: 200;
+  }
+}
+
+.project-public-connect-screen {
+  @include size($project-public-connect-device-screen-width, $project-public-connect-device-screen-height);
+  background: url($project-public-connect-device-screen-image) no-repeat;
   @include screen;
 }
