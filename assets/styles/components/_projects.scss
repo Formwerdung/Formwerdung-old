@@ -2,6 +2,7 @@
  * Vars
  */
 // Colors
+$project-color: $base-color;
 $project-device-border-color: $base-border-color;
 $project-device-background-color: $base-background-color;
 
@@ -17,10 +18,10 @@ $project-baselgia-device-padding-vertical: 2rem;
 $project-baselgia-device-padding-horizontal: 1.5rem;
 $project-baselgia-device-screen-width: 30rem;
 $project-baselgia-device-screen-height: 40rem;
-$project-staerkle-device-padding-vertical: 6rem;
-$project-staerkle-device-padding-horizontal: 0.4rem;
-$project-staerkle-device-screen-width: 20rem;
-$project-staerkle-device-screen-height: 30rem;
+$project-staerkle-device-padding-vertical: 1.5rem;
+$project-staerkle-device-padding-horizontal: 1rem;
+$project-staerkle-device-screen-width: 27rem;
+$project-staerkle-device-screen-height: 18rem;
 $project-public-connect-device-padding-vertical: 6rem;
 $project-public-connect-device-padding-horizontal: 0.4rem;
 $project-public-connect-device-screen-width: 20rem;
@@ -71,12 +72,28 @@ $project-public-connect-device-screen-height: 30rem;
   min-height: 90em;
 }
 
-.project-staerkle-device {
-  @include device;
-  top: 10em;
+.project-title {
+  @include margin(4em null 0 null);
+}
+
+.project-subheading {
+  color: tint($project-color, 50%);
+  font-size: 0.5em;
+}
+
+.project-staerkle-copy {
 
   @include media($lg-screen) {
-    float: left;
+    padding-right: 23em;
+  }
+}
+
+.project-staerkle-device {
+  @include device;
+  top: -14em;
+
+  @include media($lg-screen) {
+    float: right;
     box-shadow:
       13px 0 $project-device-background-color,
       14px 0 $project-device-border-color;
