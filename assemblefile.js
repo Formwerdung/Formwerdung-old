@@ -96,6 +96,11 @@ app.task('clean', del.bind(null, [
   '!app/.htaccess',
 ]));
 
+app.task('clean:images', del.bind(null, [
+  'app/images/*',
+  'assets/images/*'
+]));
+
 // Task: Styles
 app.task('styles', () => {
   return app.src('assets/styles/*.scss')
@@ -124,32 +129,56 @@ app.task('scripts', () => {
 
 // Task: Images
 app.task('images', () => {
-  return app.src('source/*/*.{jpg,png,gif}')
-    .pipe($.responsiveImages({
-      'content/*.{png,jpg,gif}': [{
-        width: 480,
-        suffix: '-small'
-      }, {
-        width: 720,
-        suffix: '-medium'
-      }, {
-        width: 1080,
-        suffix: '-large'
-      }],
-      'fullscreen/*.{png,jpg,gif}': [{
-        width: 544,
-        suffix: '-xs'
-      }, {
-        width: 768,
-        suffix: '-sm'
-      }, {
-        width: 992,
-        suffix: '-md'
-      }, {
-        width: 1920
-      }]
-    }))
-    .pipe($.flatten())
+  return app.src('source/*.{jpg,png,gif}')
+    // .pipe($.responsiveImages({
+    //   'content/*.{png,jpg,gif}': [{
+    //     width: 360,
+    //     suffix: '-xs'
+    //   }, {
+    //     width: 672,
+    //     suffix: '-sm'
+    //   }, {
+    //     width: 928,
+    //     suffix: '-md'
+    //   }, {
+    //     width: 1258,
+    //     suffix: '-lg'
+    //   }, {
+    //     width: 2516,
+    //     suffix: '-2x'
+    //   }],
+    //   'mobile/*.{png,jpg,gif}': [{
+    //     width: 320
+    //   }, {
+    //     width: 640,
+    //     suffix: '-2x'
+    //   }],
+    //   'tablet/*.{png,jpg,gif}': [{
+    //     width: 768
+    //   }, {
+    //     width: 1536,
+    //     suffix: '-2x'
+    //   }],
+    //   'desktop/*.{png,jpg,gif}': [{
+    //     width: 1024
+    //   }, {
+    //     width: 2048,
+    //     suffix: '-2x'
+    //   }],
+    //   'fullscreen/*.{png,jpg,gif}': [{
+    //     width: 544,
+    //     suffix: '-xs'
+    //   }, {
+    //     width: 768,
+    //     suffix: '-sm'
+    //   }, {
+    //     width: 992,
+    //     suffix: '-md'
+    //   }, {
+    //     width: 1920
+    //   }]
+    // }))
+    // .pipe($.flatten())
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true,
