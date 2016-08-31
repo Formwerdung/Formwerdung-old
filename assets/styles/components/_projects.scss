@@ -14,18 +14,21 @@ $project-staerkle-device-screen-image: "../images/screencap-staerkle.png";
 $project-public-connect-device-screen-image: "../images/screencap-public-connect.png";
 
 // Spacing
-$project-baselgia-device-padding-vertical: 2rem;
-$project-baselgia-device-padding-horizontal: 1.5rem;
-$project-baselgia-device-screen-width: 30rem;
-$project-baselgia-device-screen-height: 40rem;
-$project-staerkle-device-padding-vertical: 1.5rem;
-$project-staerkle-device-padding-horizontal: 1rem;
+$project-staerkle-device-padding-vertical: 4rem;
+$project-staerkle-device-padding-horizontal: 0.5rem;
 $project-staerkle-device-screen-width: 27rem;
 $project-staerkle-device-screen-height: 18rem;
+$project-staerkle-offset: -11em;
+$project-baselgia-device-padding-vertical: 2.6rem;
+$project-baselgia-device-padding-horizontal: 1.4rem;
+$project-baselgia-device-screen-width: 18rem;
+$project-baselgia-device-screen-height: 27rem;
+$project-baselgia-offset: -18em;
 $project-public-connect-device-padding-vertical: 6rem;
 $project-public-connect-device-padding-horizontal: 0.4rem;
-$project-public-connect-device-screen-width: 20rem;
-$project-public-connect-device-screen-height: 30rem;
+$project-public-connect-device-screen-width: 18rem;
+$project-public-connect-device-screen-height: 27rem;
+$project-public-connect-offset: -21em;
 
 
 /**
@@ -35,7 +38,7 @@ $project-public-connect-device-screen-height: 30rem;
   display: none;
   position: relative;
 
-  @include media($lg-screen) {
+  @include media($xl-screen) {
     background: $project-device-background-color;
     border-radius: 2em;
     border: $project-device-border;
@@ -69,7 +72,12 @@ $project-public-connect-device-screen-height: 30rem;
   @include container;
   @include padding(5em 1em);
   @include position;
-  min-height: 90em;
+  // min-height: 90em;
+  @include clearfix;
+
+  @include media($xl-screen) {
+    height: 100em;
+  }
 }
 
 .project-title {
@@ -81,18 +89,23 @@ $project-public-connect-device-screen-height: 30rem;
   font-size: 0.5em;
 }
 
+.project-staerkle {
+  @include clearfix;
+}
+
 .project-staerkle-copy {
 
-  @include media($lg-screen) {
+  @include media($xl-screen) {
     padding-right: 23em;
+    float: left;
   }
 }
 
 .project-staerkle-device {
   @include device;
-  top: -14em;
+  top: $project-staerkle-offset;
 
-  @include media($lg-screen) {
+  @include media($xl-screen) {
     float: right;
     box-shadow:
       13px 0 $project-device-background-color,
@@ -105,7 +118,7 @@ $project-public-connect-device-screen-height: 30rem;
       translateY(-100px)
       translateZ(50px)
       rotateX(0)
-      rotateY(-20deg)
+      rotateY(-15deg)
       rotateZ(0)
     ;
     z-index: 220;
@@ -118,14 +131,31 @@ $project-public-connect-device-screen-height: 30rem;
   @include screen;
 }
 
+.project-baselgia {
+  @include clearfix;
+
+  @include media($xl-screen) {
+    @include position(relative, -13em null null null);
+  }
+}
+
+.project-baselgia-copy {
+
+  @include media($xl-screen) {
+    padding-left: 23em;
+    // float: right;
+  }
+}
+
 .project-baselgia-device {
   @include device;
+  top: $project-baselgia-offset;
 
-  @include media($lg-screen) {
+  @include media($xl-screen) {
     box-shadow:
       -13px 0 $project-device-background-color,
       -14px 0 $project-device-border-color;
-    float: right;
+    float: left;
     @include padding($project-baselgia-device-padding-vertical 0);
     width: $project-baselgia-device-screen-width + (2 * $project-baselgia-device-padding-horizontal);
     transform:
@@ -134,7 +164,7 @@ $project-public-connect-device-screen-height: 30rem;
       translateY(-100px)
       translateZ(50px)
       rotateX(0)
-      rotateY(15deg)
+      rotateY(12deg)
       rotateZ(0)
     ;
     z-index: 210;
@@ -147,13 +177,30 @@ $project-public-connect-device-screen-height: 30rem;
   @include screen;
 }
 
+.project-public-connect {
+  @include clearfix;
+
+  @include media($xl-screen) {
+    @include position(relative, -26em null null null);
+  }
+}
+
+.project-public-connect-copy {
+
+  @include media($xl-screen) {
+    padding-right: 23em;
+    float: left;
+  }
+}
+
 .project-public-connect-device {
   @include device;
+  top: $project-public-connect-offset;
 
-  @include media($lg-screen) {
+  @include media($xl-screen) {
     box-shadow:
-      -13px 0 $project-device-background-color,
-      -14px 0 $project-device-border-color;
+      13px 0 $project-device-background-color,
+      14px 0 $project-device-border-color;
     float: right;
     @include padding($project-public-connect-device-padding-vertical 0);
     width: $project-public-connect-device-screen-width + (2 * $project-public-connect-device-padding-horizontal);
@@ -163,7 +210,7 @@ $project-public-connect-device-screen-height: 30rem;
       translateY(-100px)
       translateZ(50px)
       rotateX(0)
-      rotateY(15deg)
+      rotateY(-15deg)
       rotateZ(0)
     ;
     z-index: 200;
