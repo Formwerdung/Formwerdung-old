@@ -20,7 +20,7 @@ $project-staerkle-device-screen-width: 27rem;
 $project-staerkle-device-screen-height: 18rem;
 $project-staerkle-offset: -11em;
 $project-baselgia-device-padding-vertical: 2.6rem;
-$project-baselgia-device-padding-horizontal: 1.4rem;
+$project-baselgia-device-padding-horizontal: 1.3rem;
 $project-baselgia-device-screen-width: 18rem;
 $project-baselgia-device-screen-height: 27rem;
 $project-baselgia-offset: -18em;
@@ -48,9 +48,6 @@ $project-public-connect-offset: -21em;
     display: block;
     transform:
       perspective(800px)
-      translateX(0)
-      translateY(-100px)
-      translateZ(50px)
       rotateX(0)
       rotateZ(0)
     ;
@@ -72,11 +69,11 @@ $project-public-connect-offset: -21em;
   @include container;
   @include padding(5em 1em);
   @include position;
-  // min-height: 90em;
+  min-height: 90em;
   @include clearfix;
 
   @include media($xl-screen) {
-    height: 100em;
+    height: 104em;
   }
 }
 
@@ -97,7 +94,6 @@ $project-public-connect-offset: -21em;
 
   @include media($xl-screen) {
     padding-right: 23em;
-    float: left;
   }
 }
 
@@ -143,7 +139,6 @@ $project-public-connect-offset: -21em;
 
   @include media($xl-screen) {
     padding-left: 23em;
-    // float: right;
   }
 }
 
@@ -189,7 +184,6 @@ $project-public-connect-offset: -21em;
 
   @include media($xl-screen) {
     padding-right: 23em;
-    float: left;
   }
 }
 
