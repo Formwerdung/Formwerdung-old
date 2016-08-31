@@ -257,13 +257,19 @@ $card-icon-size: 3em;
 }
 
 .card-graf-large-1 {
-  width: 50%;
-  float: left;
-  padding-right: 1em;
+
+  @include media($md-screen) {
+    width: 50%;
+    float: left;
+    padding-right: 1em;
+  }
 }
 
 .card-graf-large-2 {
-  width: 50%;
-  float: left;
-  padding-left: 1em;
+
+  @include media($md-screen) {
+    width: 50%;
+    float: left;
+    padding-left: 1em;
+  }
 }
