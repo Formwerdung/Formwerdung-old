@@ -34,6 +34,15 @@ $project-public-connect-offset: -21em;
 /**
  * Mixins
  */
+@mixin project {
+  @include clearfix;
+  max-width: 35em;
+
+  @include media($xl-screen) {
+    max-width: none;
+  }
+}
+
 @mixin device {
   display: none;
   position: relative;
@@ -86,8 +95,17 @@ $project-public-connect-offset: -21em;
   font-size: 0.5em;
 }
 
+.project-image {
+  @include margin(2em 0);
+  border: $base-border;
+
+  @include media($xl-screen) {
+    display: none;
+  }
+}
+
 .project-staerkle {
-  @include clearfix;
+  @include project;
 }
 
 .project-staerkle-copy {
@@ -128,7 +146,7 @@ $project-public-connect-offset: -21em;
 }
 
 .project-baselgia {
-  @include clearfix;
+  @include project;
 
   @include media($xl-screen) {
     @include position(relative, -13em null null null);
@@ -173,7 +191,7 @@ $project-public-connect-offset: -21em;
 }
 
 .project-public-connect {
-  @include clearfix;
+  @include project;
 
   @include media($xl-screen) {
     @include position(relative, -26em null null null);
