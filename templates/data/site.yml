@@ -2,7 +2,7 @@ site:
   title: Formwerdung
   color: \#FFFFFE;
   prefix:
-  url: https//www.formwerdung.ch
+  url: https://www.formwerdung.ch
   image: bg.png
   fbAppId:
   siteTwitter: @formwerdung
