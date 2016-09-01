@@ -3,13 +3,10 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Marin Aeschbach -- Developer -- @johnnyicarus
 
-# THANKS
-
-    <name>
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Assemble, jQuery, Normalize.css, Bourbon/Neat, Waypoints.js, Bootstrap (for Scrollspy Plugin)

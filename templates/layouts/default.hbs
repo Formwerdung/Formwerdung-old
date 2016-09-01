@@ -15,7 +15,7 @@
         {{!-- <meta name="msapplication-window" content="width=800;height=600"> --}}
         {{!-- <meta name="msapplication-task" content="name=Task 1;action-uri=http://host/Page1.html;icon-uri=http://host/icon1.ico"> --}}
         {{!-- <meta name="msapplication-task" content="name=Task 2;action-uri=http://microsoft.com/Page2.html;icon-uri=http://host/icon2.ico"> --}}
-        {{!-- <meta name="theme-color" content="#ff69b4"> --}}
+        <meta name="theme-color" content="{{site.color}}">
         {{!-- <meta name="robots" content="noindex"> --}}
 
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
@@ -33,7 +33,6 @@
         {{!-- <meta name="apple-mobile-web-app-title" content=""> --}}
         {{!-- <meta name="mobile-web-app-capable" content="yes"> --}}
 
-        <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
         <!-- build:css /styles/main.css -->
         <!-- bower:css -->
         <!-- endbower -->
@@ -44,21 +43,21 @@
         <script src="../bower_components/picturefill/dist/picturefill.js" async defer></script>
         <!-- endbuild -->
 
-        <meta property="fb:app_id" content="123456789">
+        {{!-- <meta property="fb:app_id" content="{{site.fbAppId}}">
         <meta property="og:url" content="{{site.url}}/{{slug}}">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="">
-        <meta property="og:image" content="{{site.ogImg}}">
-        <meta property="og:description" content="">
-        <meta property="og:site_name" content="">
-        <meta property="article:author" content="">
+        <meta property="og:title" content="{{title}} | {{site.title}}">
+        <meta property="og:image" content="{{site.url}}/images/{{site.image}}">
+        <meta property="og:description" content="{{metaDescription}}">
+        <meta property="og:site_name" content="{{site.title}}">
+        <meta property="article:author" content="{{site.author}}"> --}}
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@site_account">
-        <meta name="twitter:creator" content="@individual_account">
-        <meta name="twitter:url" content="http://www.example.com/path/to/page.html">
-        <meta name="twitter:title" content="">
-        <meta name="twitter:description" content="">
-        <meta name="twitter:image" content="http://www.example.com/path/to/image.jpg">
+        <meta name="twitter:site" content="{{site.siteTwitter}}">
+        <meta name="twitter:creator" content="{{site.authorTwitter}}">
+        <meta name="twitter:url" content="{{site.url}}/{{slug}}">
+        <meta name="twitter:title" content="{{title}} | {{site.title}}">
+        <meta name="twitter:description" content="{{metaDescription}}">
+        <meta name="twitter:image" content="{{site.url}}/images/{{site.image}}">
     </head>
     <body>
         <!--[if lt IE 8]>

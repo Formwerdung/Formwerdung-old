@@ -1,4 +1,9 @@
 site:
   title: Formwerdung
-  color: \#FFFFFF;
+  color: \#FFFFFE;
   prefix:
+  url: https//www.formwerdung.ch
+  image: bg.png
+  fbAppId:
+  siteTwitter: @formwerdung
+  authorTwitter: @johnnyicarus
